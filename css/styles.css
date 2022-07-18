@@ -6,7 +6,8 @@
   --third-theme-color: #ffffff;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
-  --dark-theme-color: #000000;
+  --black-theme-color: #000000;
+  --dark-theme-color: #2f303a;
 }
 
 h1,
@@ -103,7 +104,7 @@ body {
   margin-left: auto;
 }
 
-.mail {
+.contact-list-item {
   margin-right: 50px;
 }
 
@@ -113,8 +114,9 @@ body {
   font-size: 26px;
   margin-right: 93px;
 
-  color: var(--dark-theme-color);
+  color: var(--black-theme-color);
 }
+
 .logo-accent {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -156,6 +158,7 @@ body {
   width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -175,15 +178,22 @@ body {
   letter-spacing: 0.06em;
   color: var(--third-theme-color);
   background: var(--accent-color);
+  border: none;
+  border-radius: 4px;
 }
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #2f303a;
+  background-color: var(--dark-theme-color);
   text-align: center;
 }
 
 /* ABOUT SECTION */
+
+.about-section {
+  padding-top: 0px;
+}
+
 .section-title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -195,6 +205,10 @@ body {
 .description-list {
   display: flex;
   justify-content: space-between;
+}
+
+.description-list-item {
+  width: 270px;
 }
 
 .about-list {
@@ -227,7 +241,11 @@ body {
 }
 
 .team-list-item {
+  background-color: var(--third-theme-color);
   flex-basis: calc((100% - 90px) / 4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-subtitle {
@@ -246,27 +264,28 @@ body {
 .team-list-content-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid var(--third-theme-color);
 }
 
 /* FOOTER */
 
 .footer {
   background-color: var(--dark-theme-color);
-}
-
-.footer-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.logo-link {
-  margin-bottom: 20px;
+  padding: 60px 0;
 }
 
 .logo-accent-footer {
   font-family: var(--secondary-font);
   color: var(--third-theme-color);
+}
+
+.footer .logo-link {
+  display: block;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-contact-link {
@@ -284,7 +303,7 @@ body {
 }
 /* PORTFOLIO */
 
-.portfolio-header-container {
+.header-portfolio {
   border-bottom: 1px solid #ececec;
 }
 
@@ -293,7 +312,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .menu-button {
